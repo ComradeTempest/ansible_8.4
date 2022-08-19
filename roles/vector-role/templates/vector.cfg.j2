@@ -4,7 +4,7 @@ vector_config:
       type: file
       ignore_older_secs: 600
         include:
-          - /home/test/logs/*.log
+          - /tmp/*.log
         read_from: beginning
   sinks:
     to_clickhouse:
@@ -17,3 +17,8 @@ vector_config:
       compression: gzip
       healthcheck: false
       skip_unknown_fields: true
+
+#  paths:
+#    {% for path in app_log_paths.split(',') %}
+#        - {{ path }}
+#    {% endfor %}

@@ -1,5 +1,6 @@
 galaxy_info:
   author: test
+  rolename: vector-role
   description: vector
   company: your company (optional)
   license: license (GPL-2.0-or-later, MIT, etc)

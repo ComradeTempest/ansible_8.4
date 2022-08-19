@@ -5,7 +5,9 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Vector service up and running
-    ansible.builtin.service:
-      name: vector
-      state: started
+  - name: Example assertion
+    ansible.builtin.assert:
+      that: true
+  - name: Include vector
+    include_role:
+        name: vector-role
